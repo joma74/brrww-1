@@ -115,7 +115,7 @@ var webpackConfig = [
     plugins: [
       new HtmlWebpackPlugin({
         template: "src/template.html",
-        title: "Template",
+        title: "Omnifood",
       }),
       new webpack.NamedModulesPlugin(),
     ],
@@ -128,7 +128,9 @@ var webpackConfig = [
     },
     resolve: {
       alias: {
+        "@css": path.resolve(__dirname, "src/assets/css/"),
         "@home": path.resolve(__dirname),
+        "@font": path.resolve(__dirname, "src/assets/fonts/"),
       },
     },
     module: {
@@ -146,6 +148,16 @@ var webpackConfig = [
               "postcss-loader",
             ],
           }),
+        },
+        {
+          test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+          loader: "url-loader",
+          options: {
+            limit: 10000,
+            emitFile: true,
+            name: "[name].[ext]",
+            useRelativePath: true,
+          },
         },
       ],
     },
