@@ -17,6 +17,17 @@ const devServer = {
   host: "0.0.0.0",
 }
 
+const webpack_aliase = {
+  "@components": path.resolve(__dirname, "src/js/components/"),
+  "@css": path.resolve(__dirname, "src/assets/css/"),
+  "@font": path.resolve(__dirname, "src/assets/fonts/"),
+  "@home": path.resolve(__dirname),
+  "@html": path.resolve(__dirname, "src/html/"),
+  "@img": path.resolve(__dirname, "src/assets/img/"),
+  "@js": path.resolve(__dirname, "src/js/"),
+  "@svg": path.resolve(__dirname, "src/assets/svg/"),
+}
+
 /**
  * @type {import ("webpack").Configuration[]}
  */
@@ -31,14 +42,7 @@ var webpackConfig = [
     resolve: {
       alias: {
         vue$: "vue/dist/vue.esm.js",
-        "@components": path.resolve(__dirname, "src/js/components/"),
-        "@css": path.resolve(__dirname, "src/assets/css/"),
-        "@font": path.resolve(__dirname, "src/assets/fonts/"),
-        "@home": path.resolve(__dirname),
-        "@html": path.resolve(__dirname, "src/html/"),
-        "@img": path.resolve(__dirname, "src/assets/img/"),
-        "@js": path.resolve(__dirname, "src/js/"),
-        "@svg": path.resolve(__dirname, "src/assets/svg/"),
+        ...webpack_aliase,
       },
     },
     // devtool: "source-map",
@@ -147,9 +151,7 @@ var webpackConfig = [
     },
     resolve: {
       alias: {
-        "@css": path.resolve(__dirname, "src/assets/css/"),
-        "@home": path.resolve(__dirname),
-        "@font": path.resolve(__dirname, "src/assets/fonts/"),
+        ...webpack_aliase,
       },
     },
     module: {
@@ -167,6 +169,20 @@ var webpackConfig = [
               "postcss-loader",
             ],
           }),
+        },
+        {
+          test: /\.(png|jpe?g|gif|svg)(#.*)?(\?.*)?$/,
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                limit: 10000,
+                emitFile: true,
+                name: "[name].[ext]",
+                useRelativePath: true,
+              },
+            },
+          ],
         },
         {
           test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,

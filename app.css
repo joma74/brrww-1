@@ -10,6 +10,8 @@
 
 @import "tailwindcss/utilities";
 
+@import "src/assets/css/utilities";
+
 @import "src/assets/css/debug-grid";
 
 /* https://tailwindcss.com/docs/adding-new-utilities/
