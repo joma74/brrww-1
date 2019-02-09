@@ -1,9 +1,17 @@
 /* Compile order #5 */
 
+:root {
+  --main-color: hsl(28, 80%, 52%);
+  --main-color-darker: hsl(28, 87%, 45%);
+  --main-bg-color: hsl(0, 0%, 33%);
+}
+
 html {
-  background-color: #fff;
-  color: #555;
+  color: var(--main-bg-color);
   text-rendering: optimizeLegibility;
+  font-size: 16px;
+  @apply tw-font-light;
+  @apply tw-bg-white;
 }
 
 .br-row {
@@ -13,21 +21,71 @@ html {
 
 header {
   height: 100vh;
+  position: relative;
+  /* z-index only works in positioned contexts */
+  z-index: 1;
 }
 
-header::before {
+header::after {
   content: "";
-  background-image: url("~@img/hero.jpg");
+  /* order is from right(lowest) to left(highest) */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("~@img/hero.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.2;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
+  @if $cssenv == development {
+    /* to see debug-grid toggle between 0, 0.2 or 1.0 */
+    opacity: 1;
+  }
+  /* z-index only works in positioned contexts */
+  z-index: -1;
 }
 
 .br-hero-text-box {
   width: 1140px;
+}
+
+h1 {
+  word-spacing: 0.5rem;
+  @apply tw-text-white;
+  @apply tw-font-light;
+  @apply tw-text-5xl;
+  @apply tw-uppercase;
+  @apply tw-tracking-wide;
+  @apply tw-mb-12;
+}
+
+.br-btn:link,
+.br-btn:visited {
+  @apply tw-inline-block;
+  @apply tw-rounded-full;
+  @apply tw-no-underline;
+  @apply tw-text-2xl;
+  padding: 0.75rem 2rem;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.br-btn:hover,
+.br-btn:active {
+  background-color: var(--main-color-darker) !important;
+  border: 1px solid var(--main-color-darker) !important;
+  color: white !important;
+}
+
+.br-btn-full:link,
+.br-btn-full:visited {
+  border: 1px solid var(--main-color);
+  color: white;
+  background-color: var(--main-color);
+}
+
+.br-btn-ghost:link,
+.br-btn-ghost:visited {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
 }
