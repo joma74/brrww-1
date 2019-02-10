@@ -17,6 +17,17 @@ html {
   background-color: var(--main-bg-color);
 }
 
+.br-section {
+  @apply tw-h-screen;
+  /* avoid bleeding margin from child over parent header*/
+  @apply tw-overflow-auto;
+}
+
+.br-container-justify-center {
+  max-width: var(--main-max-container-width);
+  @apply tw-mx-auto;
+}
+
 /*-----------------------------------
 LINKS
 -------------------------------------*/
@@ -78,11 +89,9 @@ HEADER
 -------------------------------------*/
 
 header {
-  @apply tw-h-screen tw-relative;
+  @apply tw-relative;
   /* z-index only works in positioned contexts */
   z-index: 1;
-  /* avoid bleeding margin from child over parent header*/
-  @apply tw-overflow-auto;
 }
 
 header::after {
@@ -101,11 +110,6 @@ header::after {
 
 nav {
   @apply tw-my-8;
-}
-
-.br-nav-box {
-  max-width: var(--main-max-container-width);
-  @apply tw-mx-auto;
   /* defines the height of the nav box*/
   @apply tw-h-24;
 }
@@ -152,3 +156,7 @@ h1 {
   @apply tw-tracking-wide;
   @apply tw-mb-8;
 }
+
+/*-----------------------------------
+FEATURES
+-------------------------------------*/
