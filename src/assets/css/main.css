@@ -76,9 +76,17 @@ nav {
   @apply tw-inline-block tw-ml-10;
 }
 
-.br-nav-main li a {
+.br-nav-main li a:link,
+.br-nav-main li a:visited {
+  @apply tw-py-2 tw-no-underline tw-uppercase tw-text-2xl;
+  border-bottom: 2px solid transparent;
   color: var(--main-color);
-  @apply tw-no-underline tw-uppercase tw-text-2xl;
+  transition: border-bottom 0.2s;
+}
+
+.br-nav-main li a:hover,
+.br-nav-main li a:active {
+  border-bottom-color: var(--main-accent-color) !important;
 }
 
 .br-hero-box {
