@@ -26,6 +26,53 @@ a {
   @apply tw-no-underline;
 }
 
+.br-link:link,
+.br-link:visited {
+  border-bottom: 2px solid transparent;
+  color: var(--main-color);
+  transition: border-bottom 0.2s;
+}
+
+.br-link:hover,
+.br-link:active {
+  border-bottom-color: var(--main-accent-color-darker) !important;
+}
+
+/*-----------------------------------
+BUTTONS
+-------------------------------------*/
+
+.br-btn:link,
+.br-btn:visited {
+  @apply tw-inline-block;
+  @apply tw-rounded-full;
+  @apply tw-no-underline;
+  @apply tw-text-2xl;
+  padding: 0.75rem 2rem;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.br-btn:hover,
+.br-btn:active {
+  background-color: var(--main-accent-color-darker) !important;
+  border: 1px solid var(--main-accent-color-darker) !important;
+  color: var(--main-color) !important;
+}
+
+.br-btn-full:link,
+.br-btn-full:visited {
+  border: 1px solid var(--main-accent-color);
+  color: var(--main-color);
+  background-color: var(--main-accent-color);
+  @apply tw-mr-8;
+}
+
+.br-btn-ghost:link,
+.br-btn-ghost:visited {
+  border: 1px solid var(--main-accent-color);
+  color: var(--main-accent-color);
+}
+
 /*-----------------------------------
 HEADER
 -------------------------------------*/
@@ -79,10 +126,7 @@ nav {
 
 .br-nav-main li a:link,
 .br-nav-main li a:visited {
-  @apply tw-py-2 tw-no-underline tw-uppercase tw-text-2xl;
-  border-bottom: 2px solid transparent;
-  color: var(--main-color);
-  transition: border-bottom 0.2s;
+  @apply tw-py-2 tw-uppercase tw-text-2xl;
 }
 
 .br-nav-main li a:hover,
@@ -107,39 +151,4 @@ h1 {
   @apply tw-uppercase;
   @apply tw-tracking-wide;
   @apply tw-mb-8;
-}
-
-/*-----------------------------------
-BUTTONS
--------------------------------------*/
-
-.br-btn:link,
-.br-btn:visited {
-  @apply tw-inline-block;
-  @apply tw-rounded-full;
-  @apply tw-no-underline;
-  @apply tw-text-2xl;
-  padding: 0.75rem 2rem;
-  transition: background-color 0.2s, border 0.2s, color 0.2s;
-}
-
-.br-btn:hover,
-.br-btn:active {
-  background-color: var(--main-accent-color-darker) !important;
-  border: 1px solid var(--main-accent-color-darker) !important;
-  color: var(--main-color) !important;
-}
-
-.br-btn-full:link,
-.br-btn-full:visited {
-  border: 1px solid var(--main-accent-color);
-  color: var(--main-color);
-  background-color: var(--main-accent-color);
-  @apply tw-mr-8;
-}
-
-.br-btn-ghost:link,
-.br-btn-ghost:visited {
-  border: 1px solid var(--main-accent-color);
-  color: var(--main-accent-color);
 }
