@@ -23,6 +23,7 @@ const webpack_aliase = {
   "@font": path.resolve(__dirname, "src/assets/fonts/"),
   "@home": path.resolve(__dirname),
   "@html": path.resolve(__dirname, "src/html/"),
+  "@icons": path.resolve(__dirname, "src/assets/icons/"),
   "@img": path.resolve(__dirname, "src/assets/img/"),
   "@js": path.resolve(__dirname, "src/js/"),
   "@svg": path.resolve(__dirname, "src/assets/svg/"),
