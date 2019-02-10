@@ -1,29 +1,33 @@
 /* Compile order #5 */
 
 :root {
-  --main-color: hsl(28, 80%, 52%);
-  --main-color-darker: hsl(28, 87%, 45%);
-  --main-bg-color: hsl(0, 0%, 33%);
+  --main-color: hsl(0, 0%, 100%);
+  --main-accent-color: hsl(28, 80%, 52%);
+  --main-accent-color-darker: hsl(28, 87%, 45%);
+  --main-bg-color: hsl(0, 0%, 100%);
+  --main-max-container-width: 1140px;
 }
 
 html {
-  color: var(--main-bg-color);
+  color: var(--main-color);
   text-rendering: optimizeLegibility;
   font-size: 16px;
   @apply tw-font-light;
-  @apply tw-bg-white;
+  line-height: 1.5;
+  background-color: var(--main-bg-color);
 }
 
-.br-row {
-  max-width: 1140px;
-  margin: 0 auto;
-}
+/*-----------------------------------
+HEADER
+-------------------------------------*/
 
 header {
   height: 100vh;
   position: relative;
   /* z-index only works in positioned contexts */
   z-index: 1;
+  /* avoid bleeding margin from child over parent*/
+  @apply .tw-overflow-auto;
 }
 
 header::after {
@@ -46,19 +50,57 @@ header::after {
   z-index: -1;
 }
 
-.br-hero-text-box {
-  width: 1140px;
+nav {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
+
+.br-nav {
+  max-width: var(--main-max-container-width);
+  @apply tw-mx-auto;
+  height: 6rem;
+}
+
+.br-nav-logo {
+  @apply tw-float-left;
+  height: inherit;
+}
+
+.br-nav-main {
+  @apply tw-relative tw-float-right;
+}
+
+.br-nav-main li {
+  @apply tw-inline-block tw-ml-10;
+}
+
+.br-nav-main li a {
+  color: var(--main-color);
+  @apply tw-no-underline tw-uppercase tw-text-2xl;
+}
+
+.br-hero-text-box {
+  max-width: var(--main-max-container-width);
+  @apply tw-absolute tw-w-full;
+}
+
+/*-----------------------------------
+HEADINGS
+-------------------------------------*/
 
 h1 {
   word-spacing: 0.5rem;
-  @apply tw-text-white;
+  color: var(--main-color);
   @apply tw-font-light;
   @apply tw-text-5xl;
   @apply tw-uppercase;
   @apply tw-tracking-wide;
-  @apply tw-mb-12;
+  @apply tw-mb-8;
 }
+
+/*-----------------------------------
+BUTTONS
+-------------------------------------*/
 
 .br-btn:link,
 .br-btn:visited {
@@ -72,20 +114,21 @@ h1 {
 
 .br-btn:hover,
 .br-btn:active {
-  background-color: var(--main-color-darker) !important;
-  border: 1px solid var(--main-color-darker) !important;
-  color: white !important;
+  background-color: var(--main-accent-color-darker) !important;
+  border: 1px solid var(--main-accent-color-darker) !important;
+  color: var(--main-color) !important;
 }
 
 .br-btn-full:link,
 .br-btn-full:visited {
-  border: 1px solid var(--main-color);
-  color: white;
-  background-color: var(--main-color);
+  border: 1px solid var(--main-accent-color);
+  color: var(--main-color);
+  background-color: var(--main-accent-color);
+  @apply tw-mr-8;
 }
 
 .br-btn-ghost:link,
 .br-btn-ghost:visited {
-  border: 1px solid var(--main-color);
-  color: var(--main-color);
+  border: 1px solid var(--main-accent-color);
+  color: var(--main-accent-color);
 }

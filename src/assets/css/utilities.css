@@ -1,18 +1,22 @@
+/* Positioning mode has to be defined */
 .br-position-center {
-  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+/* Positioning mode has to be defined */
 .br-position-center-justify {
-  position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
 
+/* Positioning mode has to be defined */
 .br-position-center-align {
-  position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.br-leading-byfont {
+  line-height: normal;
 }
