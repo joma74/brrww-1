@@ -18,30 +18,32 @@ html {
 }
 
 /*-----------------------------------
+LINKS
+-------------------------------------*/
+
+a {
+  @apply tw-inline-block;
+  @apply tw-no-underline;
+}
+
+/*-----------------------------------
 HEADER
 -------------------------------------*/
 
 header {
-  height: 100vh;
-  position: relative;
+  @apply tw-h-screen tw-relative;
   /* z-index only works in positioned contexts */
   z-index: 1;
-  /* avoid bleeding margin from child over parent*/
-  @apply .tw-overflow-auto;
+  /* avoid bleeding margin from child over parent header*/
+  @apply tw-overflow-auto;
 }
 
 header::after {
   content: "";
+  @apply tw-pin tw-absolute tw-bg-center tw-bg-cover;
   /* order is from right(lowest) to left(highest) */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("~@img/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
   @if $cssenv == development {
     /* to see debug-grid toggle between 0, 0.2 or 1.0 */
     opacity: 1;
@@ -51,21 +53,20 @@ header::after {
 }
 
 nav {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  @apply tw-my-8;
 }
 
 .br-nav-box {
   max-width: var(--main-max-container-width);
   @apply tw-mx-auto;
   /* defines the height of the nav box*/
-  height: 6rem;
+  @apply tw-h-24;
 }
 
 .br-nav-logo {
   @apply tw-float-left;
   /* inherit the height explicitly, else the image blows up to it's natural size */
-  height: inherit;
+  @apply tw-h-inherit;
 }
 
 .br-nav-main {
@@ -86,7 +87,7 @@ nav {
 
 .br-nav-main li a:hover,
 .br-nav-main li a:active {
-  border-bottom-color: var(--main-accent-color) !important;
+  border-bottom-color: var(--main-accent-color-darker) !important;
 }
 
 .br-hero-box {
