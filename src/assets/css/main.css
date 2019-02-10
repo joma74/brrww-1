@@ -55,14 +55,16 @@ nav {
   margin-bottom: 2rem;
 }
 
-.br-nav {
+.br-nav-box {
   max-width: var(--main-max-container-width);
   @apply tw-mx-auto;
+  /* defines the height of the nav box*/
   height: 6rem;
 }
 
 .br-nav-logo {
   @apply tw-float-left;
+  /* inherit the height explicitly, else the image blows up to it's natural size */
   height: inherit;
 }
 
@@ -79,7 +81,7 @@ nav {
   @apply tw-no-underline tw-uppercase tw-text-2xl;
 }
 
-.br-hero-text-box {
+.br-hero-box {
   max-width: var(--main-max-container-width);
   @apply tw-absolute tw-w-full;
 }
