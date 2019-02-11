@@ -28,6 +28,19 @@ html {
   @apply tw-mx-auto;
 }
 
+.pad {
+  @apply tw-px-4;
+}
+
+/*-----------------------------------
+ICONS
+-------------------------------------*/
+
+.icon-big {
+  @apply tw-h-10 tw-w-10 tw-block tw-mb-2 tw-mx-auto;
+  color: var(--main-accent-color);
+}
+
 /*-----------------------------------
 LINKS
 -------------------------------------*/
@@ -140,15 +153,18 @@ nav {
 
 .br-hero-box {
   max-width: var(--main-max-container-width);
+  padding-left: inherit;
+  padding-right: inherit;
   @apply tw-absolute tw-w-full;
 }
 
 /*-----------------------------------
-HEADINGS
+HEADINGS AND PARAGRAPHS
 -------------------------------------*/
 
 h1,
-h2 {
+h2,
+h3 {
   @apply tw-uppercase;
   @apply tw-tracking-wide;
   @apply tw-font-light;
@@ -167,12 +183,30 @@ h2 {
   @apply tw-text-center;
 }
 
+h3 {
+  @apply tw-text-xl;
+  @apply tw-mb-4;
+}
+
 h2:after {
   content: "";
-  @apply tw-block tw-mx-auto tw-my-8 tw-h-1 tw-w-32;
+  @apply tw-block tw-mx-auto tw-mt-8 tw-mb-6  tw-h-1 tw-w-32;
   background-color: var(--main-accent-color);
+}
+
+.long-copy {
+  @apply tw-leading-normal tw-mx-16 tw-mb-4 tw-text-2xl;
+}
+
+.pad p {
+  @apply tw-text-lg;
 }
 
 /*-----------------------------------
 FEATURES
 -------------------------------------*/
+
+.br-feature-theme {
+  color: hsl(0, 0%, 50%);
+  background-color: hsl(208, 21%, 88%);
+}
