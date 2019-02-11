@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg2"
+   style="fill:black;stroke:none"
+   sodipodi:docname="boilerplate-inkscape-symbol-lib.svg"
+   inkscape:version="0.92.4 (unknown)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1861"
+     inkscape:window-height="1056"
+     id="namedview6447"
+     showgrid="false"
+     inkscape:zoom="8.9"
+     inkscape:cx="50"
+     inkscape:cy="50"
+     inkscape:window-x="59"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <title
+     id="title6435">Boilerplate Inkscape Symbol Lib</title>
+  <desc
+     id="desc6437">Boilerplate Inkscape Symbol Lib.</desc>
+  <metadata
+     id="metadata6439">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Boilerplate Inkscape Symbol Lib</dc:title>
+        <dc:date>2019-01-19</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Boilerplate Inkscape Symbol Lib</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Open Source</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:language>English</dc:language>
+        <dc:source />
+        <dc:description>Boilerplate Inkscape Symbol Lib.</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6444">
+    <symbol
+       id="symbol4789">
+      <use
+         id="use10948"
+         xlink:href="#radar"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%"
+         transform="matrix(0.76907436,0.73465795,-0.73465795,0.76907436,-18.329069,-37.833571)" />
+    </symbol>
+    <g
+       id="radar_inkscape_duplicate"
+       transform="translate(45.338983,4.2372881)">
+      <use
+         xlink:href="#symbol4806"
+         id="use4809-3" />
+    </g>
+    <g
+       id="radar_inkscape_duplicate-6"
+       transform="translate(45.338983,4.2372881)">
+      <use
+         xlink:href="#symbol4806"
+         id="use4809-7" />
+    </g>
+    <symbol
+       id="symbol4891">
+      <use
+         id="use4845"
+         xlink:href="#radar"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%"
+         transform="rotate(-90.763899,76.123601,25.582822)" />
+    </symbol>
+    <symbol
+       id="symbol4791">
+      <use
+         xlink:href="#symbol4891"
+         id="use4894" />
+    </symbol>
+    <symbol
+       id="symbol4806">
+      <g
+         id="symbol4806_transform"
+         transform="rotate(86.423665,9.9999999,10)">
+        <path
+           d="M 8.5857865,11.414214 2.9289322,17.071068 C 4.7385763,18.880712 7.2385765,20 9.9999999,20 12.761424,20 15.261424,18.880712 17.071068,17.071068 L 11.414214,11.414214 C 11.776142,11.052285 12,10.552285 12,10 12,8.8954308 11.10457,8.0000002 9.9999998,7.9999999 8.8954307,8.0000003 8.0000002,8.8954308 7.9999995,10 c 7e-7,0.552285 0.223858,1.052285 0.585787,1.414214 z M 1.9995818,16.000418 C 0.74401402,14.329026 -1.8999528e-7,12.2514 -1.7554015e-7,10 -1.4008064e-7,4.4771525 4.4771525,-1.8306768e-8 10,8.7863409e-8 15.522848,1.7282038e-7 20,4.4771528 20,10 c 0,2.2514 -0.744014,4.329026 -1.999582,6.000418 L 16.568271,14.568271 C 17.470787,13.273059 18,11.698332 18,10 18,5.5817222 14.418278,2.0000002 10,2.0000004 5.5817218,1.9999999 1.9999998,5.5817219 2.0000004,10 c 0,1.698332 0.5292129,3.273059 1.4317286,4.568271 z M 4.8762654,13.123734 C 4.3203515,12.213838 4.0000003,11.14433 3.9999996,10 4.0000004,6.686292 6.6862919,4.0000005 9.9999999,4 13.313709,4.0000002 16,6.6862918 16,10 c 0,1.14433 -0.320352,2.213838 -0.876266,3.123734 L 13.646495,11.646495 C 13.873584,11.144351 14,10.586939 14,10 14,7.7908613 12.209139,6.0000002 10,6.0000003 7.7908614,6.0000004 6.0000003,7.7908614 6.0000003,10 c 0,0.586938 0.1264158,1.144351 0.3535038,1.646496 z"
+           id="path6441"
+           inkscape:connector-curvature="0" />
+      </g>
+    </symbol>
+  </defs>
+  <g
+     id="radar"
+     transform="translate(45.338983,4.2372881)">
+    <use
+       xlink:href="#symbol4806"
+       id="use4809" />
+  </g>
+  <use
+     id="use4879"
+     xlink:href="#radar"
+     x="0"
+     y="0"
+     width="100%"
+     height="100%"
+     transform="translate(-9.2715672,53.74024)" />
+  <use
+     xlink:href="#symbol4791"
+     id="use4794" />
+  <use
+     xlink:href="#symbol4806"
+     id="use4818" />
+</svg>

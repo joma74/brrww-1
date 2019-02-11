@@ -147,14 +147,30 @@ nav {
 HEADINGS
 -------------------------------------*/
 
-h1 {
-  word-spacing: 0.5rem;
-  color: var(--main-color);
-  @apply tw-font-light;
-  @apply tw-text-5xl;
+h1,
+h2 {
   @apply tw-uppercase;
   @apply tw-tracking-wide;
+  @apply tw-font-light;
+}
+
+h1 {
+  word-spacing: 0.25em;
+  color: var(--main-color);
+  @apply tw-text-5xl;
   @apply tw-mb-8;
+}
+
+h2 {
+  @apply tw-text-4xl;
+  word-spacing: 0.125em;
+  @apply tw-text-center;
+}
+
+h2:after {
+  content: "";
+  @apply tw-block tw-mx-auto tw-my-8 tw-h-1 tw-w-32;
+  background-color: var(--main-accent-color);
 }
 
 /*-----------------------------------
