@@ -95,6 +95,20 @@ BUTTONS
 }
 
 /*-----------------------------------
+MAIN
+-------------------------------------*/
+
+.br-main-theme {
+  scroll-snap-type: block proximity;
+  @apply tw-overflow-y-auto tw-h-screen;
+}
+
+.br-main-theme > section,
+.br-main-theme > header {
+  scroll-snap-align: center;
+}
+
+/*-----------------------------------
 HEADER
 -------------------------------------*/
 
@@ -214,4 +228,41 @@ FEATURES
 
 .br-feature-theme p {
   @apply tw-text-lg;
+}
+
+/*-----------------------------------
+FAVMEALS
+-------------------------------------*/
+
+.br-favmeals-theme {
+  color: hsl(0, 0%, 0%);
+  background-color: hsl(208, 21%, 88%);
+  padding-left: var(--main-theme-xpadding);
+  padding-right: var(--main-theme-xpadding);
+}
+
+.br-favmeals {
+  @apply tw-list-reset;
+}
+
+.br-favmeals > li {
+  /* block elements are not source-code wise space sensitive; */
+  /* else li content is formatted with line break space */
+  @apply tw-block tw-float-left tw-w-1/4;
+  /* overflow prevents zoom-in to rise dimensions*/
+  @apply tw-overflow-hidden;
+  @apply tw-leading-none;
+}
+
+.br-zoom-in > img {
+  display: block;
+  /* zoom-in factor*/
+  transform: scale(1.5);
+  height: auto;
+  transition: transform 2s;
+}
+
+.br-zoom-in > img:hover {
+  /* zoom-out factor*/
+  transform: scale(1);
 }
