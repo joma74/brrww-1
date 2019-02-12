@@ -6,6 +6,7 @@
   --main-accent-color-darker: hsl(28, 87%, 45%);
   --main-bg-color: hsl(0, 0%, 100%);
   --main-max-container-width: 1140px;
+  --main-theme-xpadding: 0.5rem;
 }
 
 html {
@@ -26,10 +27,6 @@ html {
 .br-container-justify-center {
   max-width: var(--main-max-container-width);
   @apply tw-mx-auto;
-}
-
-.pad {
-  @apply tw-px-4;
 }
 
 /*-----------------------------------
@@ -121,6 +118,11 @@ header::after {
   z-index: -1;
 }
 
+.br-headers-theme {
+  padding-left: var(--main-theme-xpadding);
+  padding-right: var(--main-theme-xpadding);
+}
+
 nav {
   @apply tw-my-8;
   /* defines the height of the nav box*/
@@ -153,8 +155,6 @@ nav {
 
 .br-hero-box {
   max-width: var(--main-max-container-width);
-  padding-left: inherit;
-  padding-right: inherit;
   @apply tw-absolute tw-w-full;
 }
 
@@ -198,15 +198,20 @@ h2:after {
   @apply tw-leading-normal tw-mx-16 tw-mb-4 tw-text-2xl;
 }
 
-.pad p {
-  @apply tw-text-lg;
-}
-
 /*-----------------------------------
 FEATURES
 -------------------------------------*/
 
-.br-feature-theme {
+.br-features-theme {
   color: hsl(0, 0%, 50%);
   background-color: hsl(208, 21%, 88%);
+  padding-left: var(--main-theme-xpadding);
+  padding-right: var(--main-theme-xpadding);
+}
+
+.br-feature-theme {
+}
+
+.br-feature-theme p {
+  @apply tw-text-lg;
 }
