@@ -235,7 +235,7 @@ FAVMEALS
 -------------------------------------*/
 
 .br-favmeals-theme {
-  color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 50%);
   background-color: hsl(208, 21%, 88%);
   padding-left: var(--main-theme-xpadding);
   padding-right: var(--main-theme-xpadding);
@@ -265,4 +265,21 @@ FAVMEALS
 .br-zoom-in > img:hover {
   /* zoom-out factor*/
   transform: scale(1);
+}
+
+/*-----------------------------------
+HIWORKS
+-------------------------------------*/
+
+.br-hiworks-theme {
+  color: hsl(0, 0%, 50%);
+  background-color: hsl(208, 21%, 88%);
+  padding-left: var(--main-theme-xpadding);
+  padding-right: var(--main-theme-xpadding);
+}
+
+.br-hiwork-theme {
+}
+
+.br-hiworks-appscreen {
 }
