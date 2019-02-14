@@ -19,7 +19,7 @@ html {
 }
 
 .br-section {
-  @apply tw-h-screen;
+  @apply tw-h-screen tw-max-h-screen;
   /* avoid bleeding margin from child over parent header*/
   @apply tw-overflow-auto;
 }
@@ -282,4 +282,6 @@ HIWORKS
 }
 
 .br-hiworks-appscreen {
+  float: left;
+  @apply tw-block;
 }
