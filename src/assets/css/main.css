@@ -248,7 +248,7 @@ FAVMEALS
 .br-favmeals > li {
   /* block elements are not source-code wise space sensitive; */
   /* else li content is formatted with line break space */
-  @apply tw-block tw-float-left tw-w-1/4;
+  @apply tw-block tw-float-left tw-w-1of4;
   /* overflow prevents zoom-in to rise dimensions*/
   @apply tw-overflow-hidden;
   @apply tw-leading-none;
@@ -281,7 +281,41 @@ HIWORKS
 .br-hiwork-theme {
 }
 
-.br-hiworks-appscreen {
-  float: left;
-  @apply tw-block;
+.br-hiworks-steps > ol > li > span {
+  @apply tw-text-2xl;
+}
+
+.br-hiworks-steps {
+  @apply tw-mt-6;
+}
+
+.br-hiworks-steps:first-child {
+  padding-right: 3%;
+  @apply tw-text-right;
+}
+
+.br-hiworks-steps:last-child {
+  padding-left: 3%;
+}
+
+.br-hiworks-steps > img {
+  width: 30%;
+}
+
+.br-hiworks-steps > ol {
+  @apply tw-list-reset;
+  counter-reset: hiworks-steps-counter;
+}
+
+.br-hiworks-steps > ol > li {
+  @apply tw-text-2xl br-leading-byfont tw-mb-6;
+  counter-increment: hiworks-steps-counter;
+}
+
+.br-hiworks-steps > ol > li::before {
+  @apply tw-inline-block br-leading-byfont tw-w-8 tw-h-8 tw-rounded-full tw-border tw-text-center;
+  /* how much the counter is offset from the text */
+  @apply tw--ml-8 tw-mr-2;
+  border-color: var(--main-accent-color);
+  content: counter(hiworks-steps-counter);
 }
