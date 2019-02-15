@@ -290,12 +290,12 @@ HIWORKS
 }
 
 .br-hiworks-steps:first-child {
-  padding-right: 3%;
   @apply tw-text-right;
 }
 
 .br-hiworks-steps:last-child {
-  padding-left: 3%;
+  /* how much the list is offset from the left side */
+  @apply tw-pl-16;
 }
 
 .br-hiworks-steps > img {
@@ -308,14 +308,15 @@ HIWORKS
 }
 
 .br-hiworks-steps > ol > li {
-  @apply tw-text-2xl br-leading-byfont tw-mb-6;
+  @apply tw-relative tw-text-2xl br-leading-byfont tw-mb-6;
   counter-increment: hiworks-steps-counter;
 }
 
 .br-hiworks-steps > ol > li::before {
-  @apply tw-inline-block br-leading-byfont tw-w-8 tw-h-8 tw-rounded-full tw-border tw-text-center;
-  /* how much the counter is offset from the text */
-  @apply tw--ml-8 tw-mr-2;
+  @apply tw-absolute tw-inline-block br-leading-byfont tw-w-8 tw-h-8 tw-rounded-full tw-border tw-text-center;
+  /* how much the counter is offset from the list item */
+  /* em because in ratio with list item's */
+  left: -2em;
   border-color: var(--main-accent-color);
   content: counter(hiworks-steps-counter);
 }
