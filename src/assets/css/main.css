@@ -299,7 +299,8 @@ HIWORKS
 }
 
 .br-hiworks-steps > img {
-  width: 30%;
+  display: inline-block;
+  width: calc(9 / 16 * 100% - 10%);
 }
 
 .br-hiworks-steps > ol {
@@ -308,7 +309,7 @@ HIWORKS
 }
 
 .br-hiworks-steps > ol > li {
-  @apply tw-relative tw-text-2xl br-leading-byfont tw-mb-6;
+  @apply tw-relative tw-text-2xl br-leading-byfont tw-mb-8 tw-mr-6;
   counter-increment: hiworks-steps-counter;
 }
 
