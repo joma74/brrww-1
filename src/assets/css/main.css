@@ -30,8 +30,8 @@ html {
 }
 
 /*-----------------------------------
-ICONS
--------------------------------------*/
+  ICONS
+  -------------------------------------*/
 
 .icon-big {
   @apply tw-h-10 tw-w-10 tw-block tw-mb-2 tw-mx-auto;
@@ -39,8 +39,8 @@ ICONS
 }
 
 /*-----------------------------------
-LINKS
--------------------------------------*/
+  LINKS
+  -------------------------------------*/
 
 a {
   @apply tw-inline-block;
@@ -60,8 +60,8 @@ a {
 }
 
 /*-----------------------------------
-BUTTONS
--------------------------------------*/
+  BUTTONS
+  -------------------------------------*/
 
 .br-btn:link,
 .br-btn:visited {
@@ -95,8 +95,8 @@ BUTTONS
 }
 
 /*-----------------------------------
-MAIN
--------------------------------------*/
+  MAIN
+  -------------------------------------*/
 
 .br-main-theme {
   scroll-snap-type: block proximity;
@@ -109,8 +109,8 @@ MAIN
 }
 
 /*-----------------------------------
-HEADER
--------------------------------------*/
+  HEADER
+  -------------------------------------*/
 
 header {
   @apply tw-relative;
@@ -173,8 +173,8 @@ nav {
 }
 
 /*-----------------------------------
-HEADINGS AND PARAGRAPHS
--------------------------------------*/
+  HEADINGS AND PARAGRAPHS
+  -------------------------------------*/
 
 h1,
 h2,
@@ -213,8 +213,8 @@ h2:after {
 }
 
 /*-----------------------------------
-FEATURES
--------------------------------------*/
+  FEATURES
+  -------------------------------------*/
 
 .br-features-theme {
   color: hsl(0, 0%, 50%);
@@ -231,12 +231,12 @@ FEATURES
 }
 
 /*-----------------------------------
-FAVMEALS
--------------------------------------*/
+  FAVMEALS
+  -------------------------------------*/
 
 .br-favmeals-theme {
   color: hsl(0, 0%, 50%);
-  background-color: hsl(208, 21%, 88%);
+  background-color: hsl(208, 15%, 95%);
   padding-left: var(--main-theme-xpadding);
   padding-right: var(--main-theme-xpadding);
 }
@@ -268,8 +268,8 @@ FAVMEALS
 }
 
 /*-----------------------------------
-HIWORKS
--------------------------------------*/
+  HIWORKS
+  -------------------------------------*/
 
 .br-hiworks-theme {
   color: hsl(0, 0%, 50%);
@@ -320,4 +320,18 @@ HIWORKS
   left: -2em;
   border-color: var(--main-accent-color);
   content: counter(hiworks-steps-counter);
+}
+
+/*-----------------------------------
+  CITIES
+  -------------------------------------*/
+
+.br-cities-theme {
+  color: hsl(0, 0%, 50%);
+  background-color: hsl(208, 15%, 95%);
+  padding-left: var(--main-theme-xpadding);
+  padding-right: var(--main-theme-xpadding);
+}
+
+.br-city-theme {
 }
