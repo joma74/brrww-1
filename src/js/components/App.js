@@ -1,6 +1,8 @@
 // @ts-ignore
 import renderFnkt from "@home/app.html?style=@home/app.css"
 
+import "@js/scripts"
+
 /** @typedef {import("vue").default} Vue */
 /** @type {import("vue").ComponentOptions<Vue>} */
 let vueComponentOptions = {

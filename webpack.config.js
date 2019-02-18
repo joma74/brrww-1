@@ -37,7 +37,7 @@ var webpackConfig = [
     entry: "./src/js/index",
     output: {
       path: path.resolve(__dirname, "dist"),
-      filename: "bundle.js",
+      filename: "[name].js",
     },
     devServer,
     resolve: {
@@ -119,6 +119,12 @@ var webpackConfig = [
       child_process: "empty",
     },
     plugins: [
+      new webpack.optimize.CommonsChunkPlugin({
+        name: "vendor",
+        minChunks: function(module) {
+          return module.context && module.context.indexOf("node_modules") !== -1
+        },
+      }),
       new HtmlWebpackPlugin({
         template: "src/template.html",
         title: "Omnifood",
