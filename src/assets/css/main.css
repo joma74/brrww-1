@@ -137,8 +137,8 @@ header::after {
   padding-right: var(--main-theme-xpadding);
 }
 
-nav {
-  @apply tw-my-8;
+.br-header-theme {
+  @apply tw-my-8 br-container-justify-center br-leading-byfont;
   /* defines the height of the nav box*/
   @apply tw-h-24;
 }
@@ -167,9 +167,22 @@ nav {
   border-bottom-color: var(--main-accent-color-darker) !important;
 }
 
-.br-hero-box {
+.br-header-theme_sticky {
+  background-color: hsl(0, 0%, 98%);
+  @apply tw-fixed tw-pin-l tw-pin-t tw-w-full;
+  @apply tw-my-0;
+  padding-left: var(--main-theme-xpadding);
+  padding-right: var(--main-theme-xpadding);
+}
+
+.br-header-theme_sticky .br-nav-main li a:link,
+.br-header-theme_sticky .br-nav-main li a:visited {
+  color: #555;
+}
+
+.br-hero-theme {
   max-width: var(--main-max-container-width);
-  @apply tw-absolute tw-w-full;
+  @apply br-position-center tw-absolute tw-w-full;
 }
 
 /*-----------------------------------
