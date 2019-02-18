@@ -236,7 +236,7 @@ FAVMEALS
 
 .br-favmeals-theme {
   color: hsl(0, 0%, 50%);
-  background-color: hsl(208, 21%, 88%);
+  background-color: hsl(208, 15%, 95%);
   padding-left: var(--main-theme-xpadding);
   padding-right: var(--main-theme-xpadding);
 }
@@ -320,4 +320,18 @@ HIWORKS
   left: -2em;
   border-color: var(--main-accent-color);
   content: counter(hiworks-steps-counter);
+}
+
+/*-----------------------------------
+CITIES
+-------------------------------------*/
+
+.br-cities-theme {
+  color: hsl(0, 0%, 50%);
+  background-color: hsl(208, 15%, 95%);
+  padding-left: var(--main-theme-xpadding);
+  padding-right: var(--main-theme-xpadding);
+}
+
+.br-city-theme {
 }
