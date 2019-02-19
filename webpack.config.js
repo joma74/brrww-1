@@ -10,7 +10,7 @@ const prettyFormat = require("pretty-format")
  * @type {import("webpack-dev-server").Configuration}
  */
 const devServer = {
-  port: 8080,
+  port: 7080,
   watchContentBase: false,
   hot: true,
   stats: "errors-only",

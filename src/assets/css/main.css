@@ -147,6 +147,7 @@ header::after {
   @apply tw-float-left;
   /* inherit the height explicitly, else the image blows up to it's natural size */
   @apply tw-h-inherit;
+  width: auto;
 }
 
 .br-nav-main {

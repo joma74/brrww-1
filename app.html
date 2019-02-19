@@ -2,11 +2,11 @@
   <main class="br-main-theme">
     <header class="br-section br-headers-theme">
       <nav class="br-header-theme br-header-theme_sticky tw-clearfix">
-        <img
-          class="br-nav-logo"
-          src="@img/logo-white.svg"
-          alt="Omnifood logo"
-        />
+        <!-- must set view-box, else dims of replaced element take place -->
+        <svg class="br-nav-logo tw-fill-current" viewBox="0 0 400 400">
+          <title>Omnifood logo</title>
+          <use href="@svg/omnifood.svg#logo"></use>
+        </svg>
         <ul class="br-nav-main br-position-center-align">
           <li><a class="br-link" href="#">Food delivery</a></li>
           <li><a class="br-link" href="#">How it works</a></li>
