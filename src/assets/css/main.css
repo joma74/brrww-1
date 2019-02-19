@@ -171,12 +171,19 @@ header::after {
   background-color: hsl(0, 0%, 98%);
   @apply tw-fixed tw-pin-l tw-pin-t tw-w-full;
   @apply tw-my-0;
+  @apply tw-h-12;
+  z-index: 2;
   padding-left: var(--main-theme-xpadding);
   padding-right: var(--main-theme-xpadding);
 }
 
 .br-header-theme_sticky .br-nav-main li a:link,
 .br-header-theme_sticky .br-nav-main li a:visited {
+  color: #555;
+  @apply tw-text-xl;
+}
+
+.br-header-theme_sticky .br-nav-logo {
   color: #555;
 }
 
