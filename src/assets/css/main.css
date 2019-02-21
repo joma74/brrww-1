@@ -99,13 +99,20 @@ a {
   -------------------------------------*/
 
 .br-main-theme {
-  scroll-snap-type: block proximity;
-  @apply tw-overflow-y-auto tw-h-screen;
+  /* RETRACT #SS-OOS 
+    Because of this overflow the sticky 
+    header will overflow the scrollbar
+    scroll-snap-type: block proximity; 
+    tw-overflow-y-scroll
+  */
+  @apply tw-h-screen;
 }
 
 .br-main-theme > section,
 .br-main-theme > header {
+  /* RETRACT #SS-OOS
   scroll-snap-align: center;
+  */
 }
 
 /*-----------------------------------
@@ -143,6 +150,16 @@ header::after {
   @apply tw-h-24;
 }
 
+.br-header-theme_sticky {
+  background-color: hsl(0, 0%, 98%);
+  @apply tw-fixed tw-pin-l tw-pin-t tw-w-full tw-max-w-full;
+  @apply tw-my-0;
+  @apply tw-h-12;
+  z-index: 2;
+  padding-left: var(--main-theme-xpadding);
+  padding-right: var(--main-theme-xpadding);
+}
+
 .br-nav-logo {
   @apply tw-float-left;
   /* inherit the height explicitly, else the image blows up to it's natural size */
@@ -166,16 +183,6 @@ header::after {
 .br-nav-main li a:hover,
 .br-nav-main li a:active {
   border-bottom-color: var(--main-accent-color-darker) !important;
-}
-
-.br-header-theme_sticky {
-  background-color: hsl(0, 0%, 98%);
-  @apply tw-fixed tw-pin-l tw-pin-t tw-w-full;
-  @apply tw-my-0;
-  @apply tw-h-12;
-  z-index: 2;
-  padding-left: var(--main-theme-xpadding);
-  padding-right: var(--main-theme-xpadding);
 }
 
 .br-header-theme_sticky .br-nav-main li a:link,
@@ -321,7 +328,7 @@ h2:after {
 
 .br-hiworks-steps > img {
   display: inline-block;
-  width: calc(9 / 16 * 100% - 10%);
+  width: calc(9 / 16 * 100% - 20%);
 }
 
 .br-hiworks-steps > ol {
