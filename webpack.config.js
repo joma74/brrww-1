@@ -125,6 +125,11 @@ var webpackConfig = [
           return module.context && module.context.indexOf("node_modules") !== -1
         },
       }),
+      new webpack.ProvidePlugin({
+        $: "jquery/dist/jquery.min",
+        jQuery: "jquery/dist/jquery.min",
+        "window.jQuery": "jquery/dist/jquery.min",
+      }),
       new HtmlWebpackPlugin({
         template: "src/template.html",
         title: "Omnifood",

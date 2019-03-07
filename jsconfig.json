@@ -21,7 +21,8 @@
     },
     "lib": ["es2016", "dom"],
     "sourceMap": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "types": ["waypoints/jquery", "jquery"]
   },
   "exclude": ["dist", "node_modules", "target"],
   "include": ["src/js/**/*", "types/**/*"],

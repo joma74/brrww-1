@@ -168,10 +168,6 @@ header::after {
   width: auto;
 }
 
-.br-header-theme_sticky .br-nav-logo {
-  /* @apply tw--mt-8; */
-}
-
 .br-nav-main {
   @apply tw-relative tw-float-right;
 }

@@ -1,4 +1,4 @@
-import $ from "jquery"
+import "waypoints/lib/jquery.waypoints.min"
 
 /**
  * The $ aka $(document).ready() method offers a way to run JavaScript
@@ -7,7 +7,16 @@ import $ from "jquery"
  */
 $(function() {
   console.log(`jquery version at ${$.fn.jquery}`)
+  //
   $("h1").click(function() {
     $(this).css("background-color", "#ff0000")
+  })
+  //
+  $(".br-features-theme").waypoint(function(direction) {
+    if (direction == "down") {
+      $("nav").addClass("br-header-theme_sticky")
+    } else {
+      $("nav").removeClass("br-header-theme_sticky")
+    }
   })
 })
