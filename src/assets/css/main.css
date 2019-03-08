@@ -153,9 +153,10 @@ header::after {
 .br-header-theme_sticky {
   background-color: hsl(0, 0%, 98%);
   @apply tw-fixed tw-pin-l tw-pin-t tw-w-full tw-max-w-full;
+  @apply tw-shadow-lg;
   /* avoid bleeding background */
   @apply tw-my-0;
-  @apply tw-h-16;
+  @apply .tw-h-16;
   z-index: 2;
   padding-left: var(--main-theme-xpadding);
   padding-right: var(--main-theme-xpadding);
@@ -165,6 +166,7 @@ header::after {
   @apply tw-float-left;
   /* inherit the height explicitly, else the image blows up to it's natural size */
   @apply tw-h-full;
+  @apply tw-cursor-pointer;
   width: auto;
 }
 
@@ -329,7 +331,7 @@ h2:after {
 
 .br-hiworks-steps > img {
   display: inline-block;
-  width: calc(9 / 16 * 100% - 20%);
+  width: calc(9 / 16 * 100% - 30%);
 }
 
 .br-hiworks-steps > ol {

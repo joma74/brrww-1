@@ -143,8 +143,8 @@ var webpackConfig = [
           maxAge: 2 * 24 * 60 * 60 * 1000,
           // All caches together must be larger than `sizeThreshold` before any
           // caches will be deleted. Together they must be at least this
-          // (default: 50 MB) big in bytes.
-          sizeThreshold: 100 * 1024 * 1024,
+          // (default: 10 MB) big in bytes.
+          sizeThreshold: 10 * 1024 * 1024,
         },
         info: {
           // 'debug', 'log', 'info', 'warn', or 'error'.
@@ -212,6 +212,7 @@ var webpackConfig = [
       new webpack.NamedModulesPlugin(),
       new ExtractTextPlugin("styles.css"),
       // Write out asset files to disk.
+      // @ts-ignore
       new DiskPlugin({
         output: {
           path: path.resolve(__dirname, "build"),
