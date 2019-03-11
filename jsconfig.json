@@ -9,19 +9,20 @@
     "target": "es6",
     "baseUrl": "./",
     "paths": {
-      "~@components/*": ["src/js/components/*"],
-      "~@css/*": ["src/assets/css/*"],
-      "~@font/*": ["src/assets/fonts/*"],
-      "~@home/*": ["./*"],
-      "~@html/*": ["src/html/*"],
-      "~@icons/*": ["src/assets/icons/*"],
-      "~@img/*": ["src/assets/img/*"],
-      "~@js/*": ["src/js/*"],
-      "~@svg/*": ["src/assets/svg/*"]
+      "@components/*": ["src/js/components/*"],
+      "@css/*": ["src/assets/css/*"],
+      "@font/*": ["src/assets/fonts/*"],
+      "@home/*": ["./*"],
+      "@html/*": ["src/html/*"],
+      "@icons/*": ["src/assets/icons/*"],
+      "@img/*": ["src/assets/img/*"],
+      "@js/*": ["src/js/*"],
+      "@svg/*": ["src/assets/svg/*"]
     },
     "lib": ["es2016", "dom"],
     "sourceMap": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "types": ["waypoints/jquery", "jquery"]
   },
   "exclude": ["dist", "node_modules", "target"],
   "include": ["src/js/**/*", "types/**/*"],

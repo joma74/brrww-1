@@ -10,7 +10,7 @@ const prettyFormat = require("pretty-format")
  * @type {import("webpack-dev-server").Configuration}
  */
 const devServer = {
-  port: 8080,
+  port: 7080,
   watchContentBase: false,
   hot: true,
   stats: "errors-only",
@@ -37,7 +37,7 @@ var webpackConfig = [
     entry: "./src/js/index",
     output: {
       path: path.resolve(__dirname, "dist"),
-      filename: "bundle.js",
+      filename: "[name].js",
     },
     devServer,
     resolve: {
@@ -119,6 +119,17 @@ var webpackConfig = [
       child_process: "empty",
     },
     plugins: [
+      new webpack.optimize.CommonsChunkPlugin({
+        name: "vendor",
+        minChunks: function(module) {
+          return module.context && module.context.indexOf("node_modules") !== -1
+        },
+      }),
+      new webpack.ProvidePlugin({
+        $: "jquery/dist/jquery.min",
+        jQuery: "jquery/dist/jquery.min",
+        "window.jQuery": "jquery/dist/jquery.min",
+      }),
       new HtmlWebpackPlugin({
         template: "src/template.html",
         title: "Omnifood",
@@ -132,8 +143,8 @@ var webpackConfig = [
           maxAge: 2 * 24 * 60 * 60 * 1000,
           // All caches together must be larger than `sizeThreshold` before any
           // caches will be deleted. Together they must be at least this
-          // (default: 50 MB) big in bytes.
-          sizeThreshold: 100 * 1024 * 1024,
+          // (default: 10 MB) big in bytes.
+          sizeThreshold: 10 * 1024 * 1024,
         },
         info: {
           // 'debug', 'log', 'info', 'warn', or 'error'.
@@ -201,6 +212,7 @@ var webpackConfig = [
       new webpack.NamedModulesPlugin(),
       new ExtractTextPlugin("styles.css"),
       // Write out asset files to disk.
+      // @ts-ignore
       new DiskPlugin({
         output: {
           path: path.resolve(__dirname, "build"),

@@ -30,8 +30,8 @@ html {
 }
 
 /*-----------------------------------
-ICONS
--------------------------------------*/
+  ICONS
+  -------------------------------------*/
 
 .icon-big {
   @apply tw-h-10 tw-w-10 tw-block tw-mb-2 tw-mx-auto;
@@ -39,8 +39,8 @@ ICONS
 }
 
 /*-----------------------------------
-LINKS
--------------------------------------*/
+  LINKS
+  -------------------------------------*/
 
 a {
   @apply tw-inline-block;
@@ -60,8 +60,8 @@ a {
 }
 
 /*-----------------------------------
-BUTTONS
--------------------------------------*/
+  BUTTONS
+  -------------------------------------*/
 
 .br-btn:link,
 .br-btn:visited {
@@ -95,22 +95,29 @@ BUTTONS
 }
 
 /*-----------------------------------
-MAIN
--------------------------------------*/
+  MAIN
+  -------------------------------------*/
 
 .br-main-theme {
-  scroll-snap-type: block proximity;
-  @apply tw-overflow-y-auto tw-h-screen;
+  /* RETRACT #SS-OOS 
+    Because of this overflow the sticky 
+    header will overflow the scrollbar
+    scroll-snap-type: block proximity; 
+    tw-overflow-y-scroll
+  */
+  @apply tw-h-screen;
 }
 
 .br-main-theme > section,
 .br-main-theme > header {
+  /* RETRACT #SS-OOS
   scroll-snap-align: center;
+  */
 }
 
 /*-----------------------------------
-HEADER
--------------------------------------*/
+  HEADER
+  -------------------------------------*/
 
 header {
   @apply tw-relative;
@@ -137,16 +144,30 @@ header::after {
   padding-right: var(--main-theme-xpadding);
 }
 
-nav {
-  @apply tw-my-8;
+.br-header-theme {
+  @apply tw-my-8 br-container-justify-center br-leading-byfont;
   /* defines the height of the nav box*/
   @apply tw-h-24;
+}
+
+.br-header-theme_sticky {
+  background-color: hsl(0, 0%, 98%);
+  @apply tw-fixed tw-pin-l tw-pin-t tw-w-full tw-max-w-full;
+  @apply tw-shadow-lg;
+  /* avoid bleeding background */
+  @apply tw-my-0;
+  @apply .tw-h-16;
+  z-index: 2;
+  padding-left: var(--main-theme-xpadding);
+  padding-right: var(--main-theme-xpadding);
 }
 
 .br-nav-logo {
   @apply tw-float-left;
   /* inherit the height explicitly, else the image blows up to it's natural size */
-  @apply tw-h-inherit;
+  @apply tw-h-full;
+  @apply tw-cursor-pointer;
+  width: auto;
 }
 
 .br-nav-main {
@@ -167,14 +188,24 @@ nav {
   border-bottom-color: var(--main-accent-color-darker) !important;
 }
 
-.br-hero-box {
+.br-header-theme_sticky .br-nav-main li a:link,
+.br-header-theme_sticky .br-nav-main li a:visited {
+  color: #555;
+  @apply tw-text-xl;
+}
+
+.br-header-theme_sticky .br-nav-logo {
+  color: #555;
+}
+
+.br-hero-theme {
   max-width: var(--main-max-container-width);
-  @apply tw-absolute tw-w-full;
+  @apply br-position-center tw-absolute tw-w-full;
 }
 
 /*-----------------------------------
-HEADINGS AND PARAGRAPHS
--------------------------------------*/
+  HEADINGS AND PARAGRAPHS
+  -------------------------------------*/
 
 h1,
 h2,
@@ -213,8 +244,8 @@ h2:after {
 }
 
 /*-----------------------------------
-FEATURES
--------------------------------------*/
+  FEATURES
+  -------------------------------------*/
 
 .br-features-theme {
   color: hsl(0, 0%, 50%);
@@ -231,8 +262,8 @@ FEATURES
 }
 
 /*-----------------------------------
-FAVMEALS
--------------------------------------*/
+  FAVMEALS
+  -------------------------------------*/
 
 .br-favmeals-theme {
   color: hsl(0, 0%, 50%);
@@ -268,8 +299,8 @@ FAVMEALS
 }
 
 /*-----------------------------------
-HIWORKS
--------------------------------------*/
+  HIWORKS
+  -------------------------------------*/
 
 .br-hiworks-theme {
   color: hsl(0, 0%, 50%);
@@ -300,7 +331,7 @@ HIWORKS
 
 .br-hiworks-steps > img {
   display: inline-block;
-  width: calc(9 / 16 * 100% - 10%);
+  width: calc(9 / 16 * 100% - 30%);
 }
 
 .br-hiworks-steps > ol {
@@ -323,8 +354,8 @@ HIWORKS
 }
 
 /*-----------------------------------
-CITIES
--------------------------------------*/
+  CITIES
+  -------------------------------------*/
 
 .br-cities-theme {
   color: hsl(0, 0%, 50%);
