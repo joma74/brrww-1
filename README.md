@@ -1,6 +1,6 @@
-# BRRWW-1
+# Build Real World Websites with HTML5 and CSS3
 
-![Screenshot of BRRWW-1](docs/Screenshot_Omnifood.small.jpg)
+![Screenshot of built web site](docs/Screenshot_Omnifood.small.jpg)
 
 ## Install instructions
 
