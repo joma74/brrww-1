@@ -1,7 +1,6 @@
 # BRRWW-1
 
-_TODO_
-
+![Screenshot of BRRWW-1](docs/Screenshot_Omnifood.small.jpg)
 
 ## Install instructions
 
